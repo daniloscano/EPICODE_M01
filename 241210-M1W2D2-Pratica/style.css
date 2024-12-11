@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+.card{
+    position: relative;
+    width: 502px;
+    height: 680px;
+}
+
+.btn{
+    border: none;
+    border-radius: 60px;
+    padding: 1em 1.2em;
+    font-size: 28px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.save-btn{
+    display: none;
+    position: absolute;
+    background-color: #e60023;
+    color: white;
+    top: 2em;
+    right: 1em;
+}
+
+.card-bottom{
+    display: none;
+    width: 100%;
+    position: absolute;
+    bottom: 2.4em;
+    left: 2em;
+}
+
+.btn-bottom{
+    width: 57%;
+    height: 68px;
+    background-color: #e9e9e9;
+    padding: .6em 1em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    opacity: 0.9;
+}
+
+.btn-bottom:nth-child(2){
+    margin: 0 .3em;
+}
+
+.btn-circle{
+    width: 68px;
+    border-radius: 50%;
+    padding: 0.6em;
+    opacity: 0.8;
+}
+
+.fa-arrow-trend-up{
+    padding-right: 0.6em;
+}
+
+.card:hover .save-btn{
+    display: block;
+    animation-duration: 1s;
+    animation-name: slideDown;
+}
+
+@keyframes slideDown {
+    from {
+        translate: 0 -0.9em;
+    }
+    to {
+        translate: 0 0;
+    }
+}
+
+.card:hover .card-bottom{
+    display: block;
+    animation-duration: 1s;
+    animation-name: slideUp;
+}
+
+@keyframes slideUp {
+    from {
+        translate: 0 1.2em;
+    }
+    to {
+        translate: 0 0;
+    }
+}
+
+.btn:active{
+    transform: scale(0.9);
+}
